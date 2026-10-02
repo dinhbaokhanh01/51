@@ -1,0 +1,495 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f7;
+    color: #222;
+}
+
+/* =========================
+   HEADER CỐ ĐỊNH
+   ========================= */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    padding: 12px 5%;
+    background: #171717;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,.25);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.head-link {
+    display: flex;
+    gap: 20px;
+}
+
+.head-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.head-link a:hover {
+    color: #ff5252;
+}
+
+.search-box input {
+    width: 190px;
+    padding: 9px 12px;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+main {
+    padding-top: 70px;
+}
+
+.hero {
+    min-height: 350px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.8), rgba(0,0,0,.25)),
+        linear-gradient(135deg, #252525, #6d1d1d);
+    color: white;
+}
+
+.hero h1 {
+    margin: 15px 0 10px;
+    font-size: clamp(36px, 6vw, 64px);
+}
+
+.hero p {
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.badge,
+.quality {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 4px;
+    background: #e53935;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #e53935;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background: #c62828;
+}
+
+/* =========================
+   VIDEO WEBSITE
+   ========================= */
+
+.watch-section,
+.practice-section,
+.about-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #666;
+}
+
+.watch-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.left-content {
+    width: 250px;
+    flex-shrink: 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.left-content h3 {
+    margin-top: 0;
+}
+
+.movie-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.movie-list li {
+    margin-bottom: 8px;
+}
+
+.movie-link {
+    display: block;
+    padding: 11px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.movie-link:hover,
+.movie-link.active {
+    color: white;
+    background: #e53935;
+    font-weight: bold;
+}
+
+.right-content {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.video-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.video-title h2 {
+    margin: 8px 0 0;
+}
+
+.views {
+    color: #777;
+    white-space: nowrap;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #111;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.description {
+    line-height: 1.6;
+    color: #555;
+}
+
+.video-demo {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.video-demo video {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    background: #111;
+}
+
+.video-demo code {
+    background: #eee;
+    padding: 2px 5px;
+}
+
+/* =========================
+   DROPDOWN MENU DỌC
+   ========================= */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.menu-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    min-height: 270px;
+}
+
+.menu-card h3 {
+    margin-top: 0;
+}
+
+#vertical-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#vertical-menu li {
+    list-style: none;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    padding: 0 15px;
+    background: black;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#vertical-menu li:hover {
+    background: #444;
+}
+
+#vertical-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#vertical-menu li ul {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    visibility: hidden;
+    z-index: 20;
+}
+
+#vertical-menu li:hover > ul {
+    visibility: visible;
+}
+
+/* =========================
+   DROPDOWN MENU NGANG
+   ========================= */
+
+#horizontal-menu {
+    height: 48px;
+    background: #222;
+    border: 1px solid #333;
+}
+
+#horizontal-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#horizontal-menu .main-menu {
+    display: flex;
+    list-style: none;
+}
+
+#horizontal-menu li {
+    position: relative;
+    list-style: none;
+}
+
+#horizontal-menu a {
+    display: block;
+    width: 130px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+#horizontal-menu a:hover {
+    background: red;
+}
+
+#horizontal-menu li ul {
+    position: absolute;
+    top: 46px;
+    left: 0;
+    visibility: hidden;
+    background: #222;
+    z-index: 30;
+}
+
+#horizontal-menu li:hover > ul {
+    visibility: visible;
+}
+
+/* =========================
+   ABOUT + FOOTER
+   ========================= */
+
+.about-section {
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 25px;
+    text-align: center;
+    background: #171717;
+    color: #bbb;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+    .main-header {
+        flex-wrap: wrap;
+    }
+
+    .head-link {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding-top: 120px;
+    }
+
+    .watch-layout {
+        flex-direction: column;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .movie-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        padding: 10px 4%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    main {
+        padding-top: 170px;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 50px 6%;
+    }
+
+    .watch-section,
+    .practice-section,
+    .about-section {
+        width: 94%;
+    }
+
+    .movie-list {
+        grid-template-columns: 1fr;
+    }
+
+    .video-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .views {
+        white-space: normal;
+    }
+
+    #horizontal-menu {
+        height: auto;
+        overflow: visible;
+    }
+
+    #horizontal-menu .main-menu {
+        flex-direction: column;
+    }
+
+    #horizontal-menu a {
+        width: 150px;
+    }
+
+    #horizontal-menu li ul {
+        top: 0;
+        left: 150px;
+    }
+
+    #vertical-menu li {
+        width: 140px;
+    }
+
+    #vertical-menu li ul {
+        left: 140px;
+    }
+}

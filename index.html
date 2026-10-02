@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho Hoạt Hình - Bài tập HTML & CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo">🎬 CartoonVN</div>
+
+    <nav class="head-link">
+        <a href="#home">Trang chủ</a>
+        <a href="#movies">Phim hoạt hình</a>
+        <a href="#menus">Menu CSS</a>
+        <a href="#about">Giới thiệu</a>
+    </nav>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Tìm tên phim...">
+    </div>
+</header>
+
+<main id="home">
+
+    <section class="hero">
+        <div>
+            <span class="badge">NỘI DUNG PHÙ HỢP TRẺ EM</span>
+            <h1>Kho Phim Hoạt Hình</h1>
+            <p>Giao diện mô phỏng website xem hoạt hình trực tuyến, sử dụng HTML và CSS.</p>
+            <a class="hero-button" href="#movies">Xem phim ngay</a>
+        </div>
+    </section>
+
+    <section id="movies" class="watch-section">
+        <div class="section-title">
+            <h2>Phim hoạt hình</h2>
+            <p>Danh sách phim được chọn lọc, giao diện đơn giản và dễ sử dụng.</p>
+        </div>
+
+        <div class="watch-layout">
+
+            <aside class="left-content">
+                <h3>Danh sách phim</h3>
+                <ul class="movie-list">
+                    <li><a href="#watch" class="movie-link active" data-title="Tom and Jerry">Tom and Jerry</a></li>
+                    <li><a href="#watch" class="movie-link" data-title="Doraemon">Doraemon</a></li>
+                    <li><a href="#watch" class="movie-link" data-title="Masha and the Bear">Masha and the Bear</a></li>
+                    <li><a href="#watch" class="movie-link" data-title="The Lion King">The Lion King</a></li>
+                    <li><a href="#watch" class="movie-link" data-title="Kung Fu Panda">Kung Fu Panda</a></li>
+                </ul>
+            </aside>
+
+            <section id="watch" class="right-content">
+                <div class="video-title">
+                    <div>
+                        <span class="quality">HD 720p</span>
+                        <h2 id="currentTitle">Tom and Jerry</h2>
+                    </div>
+                    <span class="views">▶ 12.5K lượt xem</span>
+                </div>
+
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                        title="Video hoạt hình"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <p class="description">
+                    Video minh họa cho khu vực xem phim. Trang được thiết kế để đáp ứng bố cục
+                    Left Content và Right Content theo yêu cầu bài tập.
+                </p>
+
+                <div class="video-demo">
+                    <h3>Thẻ &lt;video&gt; HTML</h3>
+                    <video controls preload="metadata">
+                        <source src="videos/sample.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ thẻ video.
+                    </video>
+                    <p>Video cục bộ là phần minh họa cho yêu cầu sử dụng thẻ <code>&lt;video&gt;</code>.</p>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <section id="menus" class="practice-section">
+        <div class="section-title">
+            <h2>Thực hành Menu Dropdown CSS</h2>
+            <p>Hai kiểu menu dọc và ngang được thực hiện trong cùng project.</p>
+        </div>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <h3>1. Menu Dropdown Dọc</h3>
+                <div id="vertical-menu">
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li>
+                            <a href="#">Phim ▸</a>
+                            <ul>
+                                <li><a href="#">Phim mới</a></li>
+                                <li><a href="#">Phim nổi bật</a></li>
+                                <li><a href="#">Phim thiếu nhi</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Thể loại ▸</a>
+                            <ul>
+                                <li><a href="#">Phiêu lưu</a></li>
+                                <li><a href="#">Hài hước</a></li>
+                                <li><a href="#">Gia đình</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <h3>2. Menu Dropdown Ngang</h3>
+                <div id="horizontal-menu">
+                    <ul class="main-menu">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li>
+                            <a href="#">Phim</a>
+                            <ul>
+                                <li><a href="#">Phim mới</a></li>
+                                <li><a href="#">Phim hay</a></li>
+                                <li><a href="#">Phim thiếu nhi</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Thể loại</a>
+                            <ul>
+                                <li><a href="#">Hài</a></li>
+                                <li><a href="#">Phiêu lưu</a></li>
+                                <li><a href="#">Gia đình</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Giới thiệu</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>Giới thiệu</h2>
+        <p>
+            Website mô phỏng được xây dựng bằng HTML và CSS, kết hợp div, video, iframe,
+            Flexbox, dropdown menu, hiệu ứng hover, fixed header và responsive design.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 CartoonVN - Bài tập thực hành HTML & CSS</p>
+</footer>
+
+<script>
+    const movieLinks = document.querySelectorAll(".movie-link");
+    const currentTitle = document.getElementById("currentTitle");
+
+    movieLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            movieLinks.forEach(item => item.classList.remove("active"));
+            link.classList.add("active");
+            currentTitle.textContent = link.dataset.title;
+        });
+    });
+
+    const searchInput = document.getElementById("searchInput");
+
+    searchInput.addEventListener("input", () => {
+        const keyword = searchInput.value.toLowerCase().trim();
+
+        movieLinks.forEach(link => {
+            const title = link.dataset.title.toLowerCase();
+            link.parentElement.style.display =
+                title.includes(keyword) ? "block" : "none";
+        });
+    });
+</script>
+
+</body>
+</html>
